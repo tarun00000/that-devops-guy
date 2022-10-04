@@ -97,11 +97,11 @@ istio-control-plane   Ready    master   26m   v1.18.4
 ## Install Istio CLI
 
 ```
-curl -L https://istio.io/downloadIstio | ISTIO_VERSION=1.6.12 TARGET_ARCH=x86_64 sh -
+url -L https://istio.io/downloadIstio | ISTIO_VERSION=1.15.1 TARGET_ARCH=x86_64 sh -
 
-mv istio-1.6.12/bin/istioctl /usr/local/bin/
+mv istio-1.15.1/bin/istioctl /usr/local/bin/
 chmod +x /usr/local/bin/istioctl
-mv istio-1.6.12 /tmp/
+mv istio-1.15.1 /tmp/
 
 ```
 
@@ -184,6 +184,12 @@ we'll make a follow up call to `/api/playlists`
 ```
 While ($true) { curl -UseBasicParsing http://servicemesh.demo/home/;curl -UseBasicParsing http://servicemesh.demo/api/playlists; Start-Sleep -Seconds 1;}
 ```
+
+while :
+do
+	curl http://vatsfamily.ca/home
+	curl http://vatsfamily.ca/api/playlists
+done
 
 
 # Observability
